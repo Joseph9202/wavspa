@@ -115,7 +115,7 @@ PYTHONPATH="$(pwd)":"$PYTHONPATH" python lra_benchmarks/listops/train_best.py \
 
 ## Citation
 
-If you find out work useful, please cite our paper at:
+If you find our work useful, please cite our paper at:
 
 ```
 @inproceedings{
