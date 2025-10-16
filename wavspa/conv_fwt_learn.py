@@ -9,13 +9,13 @@ from typing import List, Optional, Tuple, Union
 
 import jax
 import jax.numpy as jnp
-from jax.config import config
 import pywt
 from functools import partial
 
 from .utils import Wavelet
 
-config.update("jax_enable_x64", False)
+# JAX 0.4+ compatibility: use jax.config directly instead of importing config
+jax.config.update("jax_enable_x64", False)
 
 
 @partial(jax.jit, static_argnames=['level'])

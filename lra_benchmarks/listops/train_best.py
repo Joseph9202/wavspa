@@ -39,7 +39,8 @@ import numpy as np
 import tensorflow.compat.v2 as tf
 import copy
 
-from jax.config import config; config.update("jax_enable_x64", False)
+# JAX 0.4+ compatibility: use jax.config directly
+jax.config.update("jax_enable_x64", False)
 
 
 FLAGS = flags.FLAGS

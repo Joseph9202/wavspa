@@ -37,7 +37,8 @@ from lra_benchmarks.utils import train_utils
 from ml_collections import config_flags
 import tensorflow.compat.v2 as tf
 
-from jax.config import config; config.update("jax_enable_x64", False)
+# JAX 0.4+ compatibility: use jax.config directly
+jax.config.update("jax_enable_x64", False)
 
 FLAGS = flags.FLAGS
 

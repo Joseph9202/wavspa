@@ -8,13 +8,13 @@ from typing import List, Optional, Tuple, Union
 import jax
 import jax.numpy as jnp
 import pywt
-from jax.config import config
 
 from .conv_fwt import _get_filter_arrays
 from .utils import Wavelet
 from functools import partial
 
-#config.update("jax_enable_x64", True)
+# JAX 0.4+ compatibility: use jax.config directly instead of importing config
+#jax.config.update("jax_enable_x64", True)
 
 
 @partial(jax.jit, static_argnums=(1,2,3))

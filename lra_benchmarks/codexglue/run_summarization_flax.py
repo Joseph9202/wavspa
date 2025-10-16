@@ -67,7 +67,8 @@ from lra_benchmarks.models.wavspa.waveformer import FlaxBertModel as waveformer
 from lra_benchmarks.models.wavspa.modeling_flax_encoder_decoder import FlaxEncoderDecoderModel
 from transformers.models.bert.modeling_flax_bert import FlaxBertForCausalLM
 
-from jax.config import config; config.update("jax_enable_x64", False)
+# JAX 0.4+ compatibility: use jax.config directly
+jax.config.update("jax_enable_x64", False)
 
 ## Register Model
 AutoConfig.register("waveformer", WaveformerConfig)

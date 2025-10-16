@@ -1,0 +1,21 @@
+# requirements_updated.txt - Versiones modernas (2025)
+# Core JAX/Flax para deep learning
+jax>=0.4.20
+jaxlib>=0.4.20
+flax>=0.8.0
+optax>=0.1.7
+
+# TensorFlow solo para datasets (no para entrenamiento)
+tensorflow>=2.15.0
+tensorflow-datasets>=4.9.0
+tensorflow-estimator>=2.15.0
+tensorflow-hub>=0.15.0
+tensorflow-text>=2.15.0
+
+# Wavelets
+PyWavelets>=1.7.0
+
+# Utilidades
+absl-py>=2.0.0
+ml-collections>=0.1.1
+numpy>=1.24.0,<2.0.0  # JAX 0.4.x requiere numpy <2.0

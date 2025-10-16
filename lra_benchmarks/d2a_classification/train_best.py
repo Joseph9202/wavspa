@@ -40,7 +40,7 @@ import tensorflow.compat.v2 as tf
 from sklearn.utils import class_weight
 import numpy as onp
 
-from jax.config import config
+# JAX 0.4+ compatibility: removed unused jax.config import
 
 FLAGS = flags.FLAGS
 

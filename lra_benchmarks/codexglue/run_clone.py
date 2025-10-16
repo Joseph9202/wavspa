@@ -55,7 +55,8 @@ from transformers.utils import check_min_version, get_full_repo_name, send_examp
 from lra_benchmarks.models.wavspa.configuration_waveformer import WaveformerConfig
 from lra_benchmarks.models.wavspa.waveformer import FlaxBertForSequenceClassification as waveformer
 
-from jax.config import config; config.update("jax_enable_x64", False)
+# JAX 0.4+ compatibility: use jax.config directly
+jax.config.update("jax_enable_x64", False)
 
 ## Register Model
 AutoConfig.register("waveformer", WaveformerConfig)
